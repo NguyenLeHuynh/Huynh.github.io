@@ -17,11 +17,39 @@
     border-color: #2e6da4;
 }
 
-.reward {
-    animation: bounce 1s infinite;
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
 }
 
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+.game-cell {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    background: #fff;
+    transition: transform 0.3s;
+}
+
+.game-cell:hover {
+    transform: scale(1.1);
+}
+
+.game-cell.correct {
+    background: #d4edda;
+}
+
+.game-cell.wrong {
+    background: #f8d7da;
+}
+
+#fireworks {
+    z-index: 10;
+}
+
+.flower, .gift {
+    width: 50px;
+    height: 50px;
 }
